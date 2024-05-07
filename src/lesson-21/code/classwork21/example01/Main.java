@@ -2,7 +2,7 @@ package classwork21.example01;
 /*
 Разработать класс для банковского аккаунта
  */
-public class BankAccountAppl {
+public class Main {
     public static void main(String[] args) {
 
         BankAccount account = new BankAccount("Umut Kamaeva", "AE1213141516", AccountType.CREDIT);
