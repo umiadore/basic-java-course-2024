@@ -26,7 +26,7 @@ public class MyArrayList {
     // линейный поиск: вернуть индекс значения value (val)
     public int indexOf (String value)  {
         for (int i = 0; i < size; i++) {
-            if (array[i].equalsIgnoreCase(value)) {
+            if (array[i].equals(value)) {
                 return i;
             }
         }

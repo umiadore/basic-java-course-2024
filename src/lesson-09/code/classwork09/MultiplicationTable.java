@@ -1,4 +1,4 @@
-package classwork;
+package classwork09;
 /*
 Распечатать в консоли таблицу умножения от 1 до 10.
  */

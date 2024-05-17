@@ -1,12 +1,10 @@
-package homework.fence.model;
+package homework25.fence.model;
 
-import java.util.Scanner;
-
-public class Regular_polygon implements Shape {
+public class RegularPolygon implements Shape {
     private int numOfSide;
     private double lengthOfSide;
 
-    public Regular_polygon(int numOfSide, double lengthOfSide) {
+    public RegularPolygon(int numOfSide, double lengthOfSide) {
         this.numOfSide = numOfSide;
         this.lengthOfSide = lengthOfSide;
     }

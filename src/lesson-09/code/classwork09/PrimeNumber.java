@@ -1,4 +1,4 @@
-package classwork;
+package classwork09;
 import java.util.Scanner;
 /*
 Пользователь вводит натуральное число n.

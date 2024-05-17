@@ -1,8 +1,8 @@
-package homework.fence;
+package homework25.fence;
 
-import homework.fence.model.Circle;
-import homework.fence.model.Rectangle;
-import homework.fence.model.Regular_polygon;
+import homework25.fence.model.Circle;
+import homework25.fence.model.Rectangle;
+import homework25.fence.model.RegularPolygon;
 
 import java.util.Scanner;
 
@@ -23,7 +23,7 @@ public class Main {
             int numOfSide = scanner.nextInt();
             System.out.println("Input the length of your plot side ");
             double lengthOfSide = scanner.nextDouble();
-            Regular_polygon polygon = new Regular_polygon(numOfSide,lengthOfSide);
+            RegularPolygon polygon = new RegularPolygon(numOfSide,lengthOfSide);
                 perimeter = polygon.getPerimeter();
                 System.out.println("Perimeter of the polygon: " + perimeter);
                 break;

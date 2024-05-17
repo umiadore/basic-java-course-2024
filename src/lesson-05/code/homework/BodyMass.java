@@ -15,10 +15,23 @@ public class BodyMass {
         System.out.println("Enter your weight in kg");
         float weight = scanner.nextFloat();
         System.out.println("Enter your height in cm");
-        float height = scanner.nextInt() / 100f;
+        float height = scanner.nextInt() / 100f; // сантиметры делим на 100f, чтобы получить метры
 
         // body mass index.имт = вес / (рост)
-        float bodyIndex = weight / (height * height);
+        float bodyIndex = weight / (height * height); // BMI
         System.out.println("Your body mass index is " + bodyIndex);
+
+        if (bodyIndex <=15) {
+            System.out.println("Anorexia");
+        } else if (bodyIndex <=20){
+            System.out.println("Underweight");
+        }else if (bodyIndex <=25) {
+            System.out.println("Normal weight");
+        } else if (bodyIndex <=30) {
+            System.out.println("Overweight");
+        } else {
+            System.out.println("Obesity");
+        }
     }
+
 }
