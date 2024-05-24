@@ -1,4 +1,4 @@
-import homework.Random;
+import homework11.Random;
 
 /*
 Задача 1. Заполните массив целыми числами от 1 до 100.
