@@ -1,8 +1,8 @@
-package homework25.fence;
+package homework25;
 
-import homework25.fence.model.Circle;
-import homework25.fence.model.Rectangle;
-import homework25.fence.model.RegularPolygon;
+import homework25.fence.Circle;
+import homework25.fence.Rectangle;
+import homework25.fence.RegularPolygon;
 
 import java.util.Scanner;
 

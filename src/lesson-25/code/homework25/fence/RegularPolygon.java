@@ -1,4 +1,4 @@
-package homework25.fence.model;
+package homework25.fence;
 
 public class RegularPolygon implements Shape {
     private int numOfSide;

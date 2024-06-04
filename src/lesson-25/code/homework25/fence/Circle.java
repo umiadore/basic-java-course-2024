@@ -1,4 +1,4 @@
-package homework25.fence.model;
+package homework25.fence;
 
 public class Circle implements Shape {
     private double r;
