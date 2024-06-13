@@ -15,7 +15,12 @@ public class Task1 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        int number = scanner.nextInt();
-        System.out.println("Input ");
+        int [] array = new int[10];
+        System.out.println("Input numbers");
+        int n1 = scanner.nextInt();
+        int n2 = scanner.nextInt();
+        int n3 = scanner.nextInt();
+
+
     }
 }
