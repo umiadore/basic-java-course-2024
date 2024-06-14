@@ -1,4 +1,4 @@
-package homework25;
+package homework25.fence;
 
 import homework25.fence.Circle;
 import homework25.fence.Rectangle;
