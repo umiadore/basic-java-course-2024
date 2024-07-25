@@ -1,4 +1,4 @@
-package homework25.task1;
+package homework25.task;
 public class BinarySearch {
     public static int binarySearch (int [] array, int number, int start, int finish) {
         int index = -1;

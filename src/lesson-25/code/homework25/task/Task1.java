@@ -1,6 +1,5 @@
-package homework25.task1;
+package homework25.task;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 /*

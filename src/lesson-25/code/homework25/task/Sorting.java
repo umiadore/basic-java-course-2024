@@ -1,4 +1,4 @@
-package homework25.task1;
+package homework25.task;
 
 public class Sorting {
     public int[] bubbleSort (int[] array){
