@@ -14,7 +14,6 @@ import static java.lang.String.format;
 public class ParcelMain {
     public static void main(String[] args) {
 
-
         Parcel parcel1 = new Parcel("Moscow", "Saint P", 12.5, Instant.parse("2024-06-01T12:00:00Z"));
         Parcel parcel2 = new Parcel("Kazan", "Kiyv", 2.8, Instant.parse("2024-06-18T19:00:00Z"));
         Parcel parcel3 = new Parcel("Moscow", "Berlin", 8.00, Instant.parse("2024-06-09T14:00:00Z"));
@@ -29,7 +28,7 @@ public class ParcelMain {
 
 
        Parcel berlinDestination = parcelList.stream()
-               .filter(parcel -> "Berlin".equals(parcel.getToCity()))
+               .filter(parcel -> parcel.getToCity().equals("Berlin")) //"Berlin".equals(parcel.getToCity())
                .max(Comparator.comparing(Parcel::getDate))
                .orElse(null);
         if (berlinDestination == null){

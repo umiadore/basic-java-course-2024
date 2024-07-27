@@ -25,6 +25,16 @@ public class Parcel {
         this.date = date;
     }
 
+    @Override
+    public String toString() {
+        return "Parcel{" +
+                "fromCity='" + fromCity + '\'' +
+                ", toCity='" + toCity + '\'' +
+                ", weight=" + weight +
+                ", date=" + date +
+                '}';
+    }
+
     public String getFromCity() {
         return fromCity;
     }
