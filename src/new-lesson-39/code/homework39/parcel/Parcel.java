@@ -32,7 +32,7 @@ public class Parcel {
         this.fromCity = fromCity;
     }
 
-    public String getToCity(String berlin) {
+    public String getToCity() {
         return toCity;
     }
 

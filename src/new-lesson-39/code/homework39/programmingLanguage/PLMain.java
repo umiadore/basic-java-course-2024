@@ -24,6 +24,16 @@ public class PLMain {
 
         // 1.3 Найдите среди них самых старый язык, используя любой подход (стримы привествуются)
 
+        ProgrammingLanguage theOldest = languageList.stream()
+                .min(Comparator.comparing(ProgrammingLanguage::getDate))
+                .orElse(null);
+
+        if (theOldest == null){
+            System.out.println("Nothing has been found!");
+        } else {
+            System.out.println("The oldest programming language is " + theOldest.getName());
+        }
+
 
 
 

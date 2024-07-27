@@ -2,10 +2,7 @@ package homework39.parcel;
 
 import java.time.LocalDateTime;
 import java.time.Year;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 
 import static java.lang.String.format;
 
@@ -29,12 +26,17 @@ public class ParcelMain {
         parcelList.add(parcel4);
 
 
-       /* Optional<Objects> parceList = parcelList.stream()
-                .flatMap(p-> p.getToCity("Berlin"))
-                .filter(p-> p.)
-                .toList();
-        
-*/
+       Parcel berlinDestination = parcelList.stream()
+               .filter(parcel -> "Berlin".equals(parcel.getToCity()))
+               .max(Comparator.comparing(Parcel::getLocalDateTime))
+               .orElse(null);
+        if (berlinDestination == null){
+            System.out.println("There is no parcels to Berlin");
+        } else {
+        System.out.println("The Info of the newest - sent parcel to Berlin: " + berlinDestination);
 
+
+
+    }
     }
 }
