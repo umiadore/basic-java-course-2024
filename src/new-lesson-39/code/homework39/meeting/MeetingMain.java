@@ -24,7 +24,7 @@ public class MeetingMain {
         meetingList.add(meeting2);
         meetingList.add(meeting3);
 
-        Meeting aveTime = meetingList.stream()
+      //  Meeting aveTime = meetingList.stream()
 
     }
 }

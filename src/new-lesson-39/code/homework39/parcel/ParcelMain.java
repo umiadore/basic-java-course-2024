@@ -1,5 +1,6 @@
 package homework39.parcel;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.Year;
 import java.util.*;
@@ -13,10 +14,11 @@ import static java.lang.String.format;
 public class ParcelMain {
     public static void main(String[] args) {
 
-        Parcel parcel1 = new Parcel("Moscow", "Saint P", 12.5, LocalDateTime.of(2024, 5, 12, 14, 0));
-        Parcel parcel2 = new Parcel("Kazan", "Kiyv", 2.8, LocalDateTime.of(2023, 12, 19, 18, 55));
-        Parcel parcel3 = new Parcel("Moscow", "Berlin", 8.00, LocalDateTime.of(2024,3 , 22, 9, 0));
-        Parcel parcel4 = new Parcel("Hamburg", "Berlin", 12.5, LocalDateTime.of(2024, 1, 18, 22, 0));
+
+        Parcel parcel1 = new Parcel("Moscow", "Saint P", 12.5, Instant.parse("2024-06-01T12:00:00Z"));
+        Parcel parcel2 = new Parcel("Kazan", "Kiyv", 2.8, Instant.parse("2024-06-18T19:00:00Z"));
+        Parcel parcel3 = new Parcel("Moscow", "Berlin", 8.00, Instant.parse("2024-06-09T14:00:00Z"));
+        Parcel parcel4 = new Parcel("Hamburg", "Berlin", 12.5, Instant.parse("2024-06-12T02:00:00Z"));
 
 
         List<Parcel> parcelList = new ArrayList<>();
@@ -28,7 +30,7 @@ public class ParcelMain {
 
        Parcel berlinDestination = parcelList.stream()
                .filter(parcel -> "Berlin".equals(parcel.getToCity()))
-               .max(Comparator.comparing(Parcel::getLocalDateTime))
+               .max(Comparator.comparing(Parcel::getDate))
                .orElse(null);
         if (berlinDestination == null){
             System.out.println("There is no parcels to Berlin");

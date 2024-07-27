@@ -1,5 +1,6 @@
 package homework39.parcel;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
@@ -15,13 +16,13 @@ public class Parcel {
     private String fromCity;
     private String toCity;
     private double weight;
-    private LocalDateTime localDateTime;
+    private Instant date;
 
-    public Parcel(String fromCity, String toCity, double weight, LocalDateTime localDateTime) {
+    public Parcel(String fromCity, String toCity, double weight, Instant date) {
         this.fromCity = fromCity;
         this.toCity = toCity;
         this.weight = weight;
-        this.localDateTime = localDateTime;
+        this.date = date;
     }
 
     public String getFromCity() {
@@ -48,33 +49,23 @@ public class Parcel {
         this.weight = weight;
     }
 
-    public LocalDateTime getLocalDateTime() {
-        return localDateTime;
+    public Instant getDate() {
+        return date;
     }
 
-    public void setLocalDateTime(LocalDateTime localDateTime) {
-        this.localDateTime = localDateTime;
+    public void setDate(Instant date) {
+        this.date = date;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Parcel parcel)) return false;
-        return Double.compare(weight, parcel.weight) == 0 && Objects.equals(fromCity, parcel.fromCity) && Objects.equals(toCity, parcel.toCity) && Objects.equals(localDateTime, parcel.localDateTime);
+        return Double.compare(weight, parcel.weight) == 0 && Objects.equals(fromCity, parcel.fromCity) && Objects.equals(toCity, parcel.toCity) && Objects.equals(date, parcel.date);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(fromCity, toCity, weight, localDateTime);
-    }
-
-    @Override
-    public String toString() {
-        return "Parcel{" +
-                "fromCity='" + fromCity + '\'' +
-                ", toCity='" + toCity + '\'' +
-                ", weight=" + weight +
-                ", localDateTime=" + localDateTime +
-                '}';
+        return Objects.hash(fromCity, toCity, weight, date);
     }
 }
