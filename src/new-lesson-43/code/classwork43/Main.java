@@ -16,5 +16,6 @@ public class Main {
         TrainController trainController = new TrainController(scanner, trainService);
 
         trainController.startProgram();
+        trainController.startProgram();
     }
 }
