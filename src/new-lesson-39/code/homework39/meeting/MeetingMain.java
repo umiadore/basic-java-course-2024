@@ -1,9 +1,13 @@
 package homework39.meeting;
 
 import java.time.Instant;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
+
+import static java.time.temporal.ChronoField.SECOND_OF_DAY;
 
 /*
 3.2 Создайте несколько встреч
@@ -14,9 +18,9 @@ import java.util.List;
 public class MeetingMain {
     public static void main(String[] args) {
 
-        Meeting meeting1 = new Meeting("Kira", "Kirill", LocalDateTime.of(2024, 7, 22, 14, 0));
-        Meeting meeting2 = new Meeting("Kira", "Kirill", LocalDateTime.of(2024, 7, 22, 12, 0));
-        Meeting meeting3 = new Meeting("Kira", "Kirill", LocalDateTime.of(2024, 7, 22, 17, 0));
+        Meeting meeting1 = new Meeting("Kira", "Kirill", LocalDateTime.of(LocalDate.now(), LocalTime.of(23, 45)));
+        Meeting meeting2 = new Meeting("Kira", "Kirill", LocalDateTime.of(LocalDate.now(), LocalTime.of(21, 15)));
+        Meeting meeting3 = new Meeting("Kira", "Kirill", LocalDateTime.of(LocalDate.now(), LocalTime.of(22, 10)));
 
 
         List <Meeting> meetingList = new ArrayList<>();
@@ -24,7 +28,16 @@ public class MeetingMain {
         meetingList.add(meeting2);
         meetingList.add(meeting3);
 
-      //  Meeting aveTime = meetingList.stream()
+        int sum = meetingList.stream()
+                .map(meeting -> meeting.getTime().toLocalTime())
+                .map(localTime -> localTime.get(SECOND_OF_DAY))
+                .reduce((first, second)-> first + second)
+                .orElse(0);
+
+        int ave = sum /meetingList.size();
+
+        LocalTime localTime = LocalTime.ofSecondOfDay(ave);
+        System.out.println(localTime);
 
     }
 }

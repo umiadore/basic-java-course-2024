@@ -14,13 +14,12 @@ import java.util.Objects;
 public class Meeting {
     private String organizer;
     private String attendee;
-    private LocalDateTime localDateTime;
+    private LocalDateTime time;
 
-
-    public Meeting(String organizer, String attendee, LocalDateTime localDateTime) {
+    public Meeting(String organizer, String attendee, LocalDateTime time) {
         this.organizer = organizer;
         this.attendee = attendee;
-        this.localDateTime = localDateTime;
+        this.time = time;
     }
 
     public String getOrganizer() {
@@ -39,24 +38,24 @@ public class Meeting {
         this.attendee = attendee;
     }
 
-    public LocalDateTime getLocalDateTime() {
-        return localDateTime;
+    public LocalDateTime getTime() {
+        return time;
     }
 
-    public void setLocalDateTime(LocalDateTime localDateTime) {
-        this.localDateTime = localDateTime;
+    public void setTime(LocalDateTime time) {
+        this.time = time;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Meeting meeting)) return false;
-        return Objects.equals(organizer, meeting.organizer) && Objects.equals(attendee, meeting.attendee) && Objects.equals(localDateTime, meeting.localDateTime);
+        return Objects.equals(organizer, meeting.organizer) && Objects.equals(attendee, meeting.attendee) && Objects.equals(time, meeting.time);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(organizer, attendee, localDateTime);
+        return Objects.hash(organizer, attendee, time);
     }
 
     @Override
@@ -64,7 +63,7 @@ public class Meeting {
         return "Meeting{" +
                 "organizer='" + organizer + '\'' +
                 ", attendee='" + attendee + '\'' +
-                ", localDateTime=" + localDateTime +
+                ", time=" + time +
                 '}';
     }
 }
